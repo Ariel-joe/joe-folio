@@ -792,6 +792,14 @@ body {
   }
 }
 
+.motion-preset-slide-left {
+  --motion-origin-translate-x: 25%;
+  --motion-origin-opacity: 0;
+  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
+  --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration) * var(--motion-translate-perceptual-duration-multiplier)) var(--motion-translate-timing) var(--motion-translate-delay) both;
+  animation: var(--motion-all-loop-and-enter-animations);
+}
+
 @keyframes RomboConfettiPop {
   0% {
     opacity: 0;
@@ -953,6 +961,10 @@ body {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .flex-shrink-0 {
@@ -1530,6 +1542,35 @@ body {
 
 .motion-delay-\[500ms\] {
   --motion-delay: 500ms;
+}
+
+.motion-delay-\[1000ms\] {
+  --motion-delay: 1000ms;
+}
+
+.motion-delay-\[1300ms\] {
+  --motion-delay: 1300ms;
+}
+
+.motion-delay-\[1600ms\] {
+  --motion-delay: 1600ms;
+}
+
+.motion-delay-\[1900ms\] {
+  --motion-delay: 1900ms;
+}
+
+.motion-ease-spring-bouncier {
+  --motion-timing: var(--motion-spring-bouncier);
+  --motion-perceptual-duration-multiplier: 2.035;
+  --motion-filter-timing: var(--motion-spring-smooth);
+  --motion-opacity-timing: var(--motion-spring-smooth);
+  --motion-background-color-timing: var(--motion-spring-smooth);
+  --motion-text-color-timing: var(--motion-spring-smooth);
+  --motion-filter-perceptual-duration-multiplier: 1.66;
+  --motion-opacity-perceptual-duration-multiplier: 1.66;
+  --motion-background-color-perceptual-duration-multiplier: 1.66;
+  --motion-text-color-perceptual-duration-multiplier: 1.66;
 }
 
 .hover\:cursor-pointer:hover {
